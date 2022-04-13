@@ -1,0 +1,37 @@
+.custom-card {
+    width: 20%;
+    float: left;
+    margin-right: 10px;
+    padding-left: 14px;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.mandatory:after {
+    content: " *";
+    color: red;
+}
+.center-align {
+    text-align: center;
+}
+.img-ipm {
+    height: 170px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 18px;
+}
+.pull-right {
+    float:right;
+}
+table.table.day-table {
+    border: 1px solid;
+    float: left;
+    width: 12%;
+    margin-left: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
