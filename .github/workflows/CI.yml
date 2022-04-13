@@ -1,0 +1,27 @@
+name: Deploy
+
+# Trigger the workflow on push and 
+# pull request events on the production branch
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+      
+# Authenticate to the the server via ssh 
+# and run our deployment script 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          port: ${{ secrets.SSH_PORT }}          
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: "cd /home/u905095300/domains/siteworld.co.in/vycab && ./deploy.sh"
