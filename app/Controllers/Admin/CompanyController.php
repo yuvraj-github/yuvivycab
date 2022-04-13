@@ -170,8 +170,7 @@ class CompanyController extends BaseController
         } catch (\Exception $e) {
             die($e->getMessage());
         }
-    }
-    
+    }    
     /**
      * Funtion to save Image.
      *
