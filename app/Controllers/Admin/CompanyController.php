@@ -171,6 +171,7 @@ class CompanyController extends BaseController
             die($e->getMessage());
         }
     }
+    
     /**
      * Funtion to save Image.
      *
